@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Parent & Teacher Hub</title>
+    <link rel="stylesheet" href="interactiveStyles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Parent & Teacher Hub</h1>
+        <p>Supporting Child Mental Health & Wellbeing</p>
+    </header>
+     <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="question.html">Q/A Session</a></li>
+            <li><a href="remidies.html">Remidies</a></li>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="InteractiveParentTeacherHub.html">Parents Hub</a></li>
+        </ul>
+    </nav>
+
+
+    <nav class="navbar">
+        <a href="#resources" onclick="showTab('resources')">Resources</a>
+        <a href="#recommendations" onclick="showTab('recommendations')">Recommendations</a>
+        <a href="#mental-tips" onclick="showTab('mental-tips')">Mental Health Tips</a>
+        <a href="#feedback" onclick="showTab('feedback')">Feedback</a>
+    </nav>
+
+    <!-- Resources Section -->
+    <section id="resources" class="tab-content active">
+        <h2>Resources</h2>
+        <div class="resource-list">
+            <a href="https://www.cdc.gov/mental-health/?CDC_AAref_Val=https://www.cdc.gov/mentalhealth/index.htm" target="_blank" class="resource-item">CDC - Mental Health Resources for Children</a>
+            <a href="https://www.childmind.org/" target="_blank" class="resource-item">Child Mind Institute - Mental Health Resources for Kids</a>
+            <a href="https://www.nami.org/Your-Journey/Kids-Teens-and-Young-Adults" target="_blank" class="resource-item">NAMI - Resources for Kids, Teens, and Young Adults</a>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8890771/" target="_blank" class="resource-item">Mental Health America - Mental Health Resources for Children</a>
+            <a href="https://www.pbs.org/parents/activity-finder/ages-all/topics-all/shows-all/types-coloring-and-printable" target="_blank" class="resource-item">PBS - Mental Health Tips for Parents</a>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="tab-content">
+        <h2>Recommendations</h2>
+        <div class="recommendation-list">
+            <div class="recommendation-item" onclick="toggleRecommendationDetails('rec1')">Practice Mindfulness  : 
+                Helps manage stress and emotions, improving focus and calmness. Try deep breathing, meditation, and yoga.
+            </div>
+            <div id="rec1" class="recommendation-details">
+                <p>Helps manage stress and emotions, improving focus and calmness. Try deep breathing, meditation, and yoga.</p>
+            </div>
+
+            <div class="recommendation-item" onclick="toggleRecommendationDetails('rec2')">Encourage Social Interaction : 
+                Promotes emotional well-being by connecting with peers. Arrange playdates and teach communication skills.
+            </div>
+            <div id="rec2" class="recommendation-details">
+                <p>Promotes emotional well-being by connecting with peers. Arrange playdates and teach communication skills.</p>
+            </div>
+
+            <div class="recommendation-item" onclick="toggleRecommendationDetails('rec3')">Ensure Adequate Sleep : 
+                Improves mood and cognitive function. Set a bedtime routine, limit screen time, and create a quiet environment.
+            </div>
+            <div id="rec3" class="recommendation-details">
+                <p>Improves mood and cognitive function. Set a bedtime routine, limit screen time, and create a quiet environment.</p>
+            </div>
+
+            <div class="recommendation-item" onclick="toggleRecommendationDetails('rec4')">Foster a Growth Mindset : 
+                Builds resilience. Celebrate effort, encourage learning from mistakes, and promote new challenges
+            </div>
+            <div id="rec4" class="recommendation-details">
+                <p>Builds resilience. Celebrate effort, encourage learning from mistakes, and promote new challenges.</p>
+            </div>
+
+            <!-- New Recommendation: Encourage Creative Expression -->
+            <div class="recommendation-item" onclick="toggleRecommendationDetails('rec5')">Encourage Creative Expression : 
+                Creative activities like drawing, writing, or music help children express emotions and improve problem-solving skills.
+            </div>
+            <div id="rec5" class="recommendation-details">
+                <p>Creative activities like drawing, writing, or music help children express emotions and improve problem-solving skills.</p>
+                <ul>
+                    <li>Provide art supplies 🎨</li>
+                    <li>Encourage storytelling 📖</li>
+                    <li>Introduce musical instruments 🎶</li>
+                    <li>Foster imaginative play 🧸</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Mental Health Tips -->
+    <section id="mental-tips" class="tab-content">
+        <h2>Mental Health Tips</h2>
+        <div class="mental-tip-list">
+            <div class="mental-tip-item">
+                <h3>Maintain a Balanced Diet</h3>
+                <p>Nutrition plays a big role in mental health. Ensure a balanced diet rich in fruits, vegetables, and whole grains.</p>
+            </div>
+            <div class="mental-tip-item">
+                <h3>Create a Safe Emotional Space</h3>
+                <p>Allow children to express their feelings without judgment. Encourage them to talk openly about their emotions.</p>
+            </div>
+            <div class="mental-tip-item">
+                <h3>Incorporate Physical Activity</h3>
+                <p>Exercise releases endorphins, helping to boost mood and reduce anxiety. Encourage activities like walking or playing sports.</p>
+            </div>
+            <div class="mental-tip-item">
+                <h3>Limit Screen Time</h3>
+                <p>Too much screen time can negatively affect sleep and mood. Set limits on devices, especially before bedtime.</p>
+            </div>
+            <div class="mental-tip-item">
+                <h3>Practice Gratitude</h3>
+                <p>Encourage children to write down things they are grateful for daily. It helps cultivate a positive mindset.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="tab-content">
+        <h2>Share Your Feedback</h2>
+        <form id="feedback-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            
+            <button type="submit" onclick="submitFeedback(event)">Submit Feedback</button>
+        </form>
+        <p id="feedback-message" style="color: green; font-weight: bold; display: none;">Feedback Saved Successfully!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mental Health & Wellbeing Tracking Solution for Children</p>
+    </footer>
+</div>
+
+<script src="interactiveScript.js"></script>
+</body>
+</html>

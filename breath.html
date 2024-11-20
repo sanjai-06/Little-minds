@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Exercise for Mental Health</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #FFB6C1, #87CEEB); /* Gradient from light pink to sky blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #444;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #FF6347; /* Tomato red for header */
+            animation: bounceIn 2s infinite alternate;
+        }
+
+        p.instructions {
+            font-size: 1.2em;
+            color: #555;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .timer {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #32CD32; /* Lime green timer text */
+            margin: 20px 0;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #FF1493; /* Deep pink circle */
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 3em;
+            transition: all 1s ease-in-out;
+            animation: spin 5s infinite linear;
+        }
+
+        .circle.inhale {
+            transform: scale(1.2); /* Expand during inhale */
+            animation: bounceIn 1s ease-out forwards;
+        }
+
+        .circle.exhale {
+            transform: scale(0.8); /* Shrink during exhale */
+            animation: bounceOut 1s ease-out forwards;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .start-button, .stop-button, .restart-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #FF6347; /* Tomato red for buttons */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .start-button:hover, .stop-button:hover, .restart-button:hover {
+            background-color: #FF4500; /* Darker red on hover */
+            transform: scale(1.1); /* Slight scaling effect */
+        }
+
+        .start-button:disabled {
+            background-color: #a5d6a7;
+            cursor: not-allowed;
+        }
+
+        .mood-rating, .progress-bar {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .mood-rating select, .progress-bar {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+            background-color: #F0E68C; /* Light yellow for select and progress bar */
+        }
+
+        .progress-bar {
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 10px;
+            animation: slideIn 2s ease-out;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #32CD32; /* Lime green progress bar */
+            width: 0%;
+            border-radius: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.5);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounceOut {
+            0% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(0.8);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Breathing Exercise</h1>
+        <p class="instructions">Rate your mood and choose a breathing technique to begin.</p>
+
+        <div class="mood-rating">
+            <label for="preMood">How do you feel before the exercise?</label><br>
+            <select id="preMood">
+                <option value="1">Very Stressed</option>
+                <option value="2">Stressed</option>
+                <option value="3">Neutral</option>
+                <option value="4">Calm</option>
+                <option value="5">Very Calm</option>
+            </select>
+        </div>
+
+        <div class="circle" id="breathingCircle">Start</div>
+
+        <div class="timer" id="stepIndicator">Ready to Begin!</div>
+
+        <div class="button-container">
+            <button class="start-button" id="startButton">Start Exercise</button>
+            <button class="stop-button" id="stopButton" style="display:none;">Stop Exercise</button>
+            <button class="restart-button" id="restartButton" style="display:none;">Restart Exercise</button>
+        </div>
+
+        <div class="mood-rating">
+            <label for="postMood">How do you feel after the exercise?</label><br>
+            <select id="postMood">
+                <option value="1">Very Stressed</option>
+                <option value="2">Stressed</option>
+                <option value="3">Neutral</option>
+                <option value="4">Calm</option>
+                <option value="5">Very Calm</option>
+            </select>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+
+        <p class="instructions">
+            Instructions: Choose a technique, and follow the breathing pattern. Inhale for 4 seconds, hold for 7 seconds, and exhale for 8 seconds (4-7-8). Repeat for 4 cycles.
+        </p>
+    </div>
+
+    <script>
+        let currentStep = 0;
+        let breathCycles = 0;
+        let stepDuration = { inhale: 4, hold: 7, exhale: 8 };
+        let interval;
+        let isActive = false;
+        const circle = document.getElementById('breathingCircle');
+        const timerDisplay = document.getElementById('stepIndicator');
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const restartButton = document.getElementById('restartButton');
+        const progressBar = document.getElementById('progressBar');
+        const preMood = document.getElementById('preMood');
+        const postMood = document.getElementById('postMood');
+
+        const steps = [
+            { name: 'Inhale', duration: stepDuration.inhale, className: 'inhale' },
+            { name: 'Hold', duration: stepDuration.hold, className: '' },
+            { name: 'Exhale', duration: stepDuration.exhale, className: 'exhale' }
+        ];
+
+        function startExercise() {
+            breathCycles = 0;
+            currentStep = 0;
+            isActive = true;
+            startButton.disabled = true;
+            stopButton.style.display = "inline-block";
+            restartButton.style.display = "none";
+            nextStep();
+        }
+
+        function stopExercise() {
+            clearInterval(interval);
+            isActive = false;
+            stopButton.style.display = "none";
+            startButton.disabled = false;
+            startButton.innerText = "Start Exercise";
+            restartButton.style.display = "inline-block";
+            timerDisplay.innerText = "Exercise Stopped!";
+        }
+
+        function restartExercise() {
+            breathCycles = 0;
+            currentStep = 0;
+            timerDisplay.innerText = "Ready to Begin!";
+            progressBar.style.width = "0%";
+            nextStep();
+            restartButton.style.display = "none";
+        }
+
+        function nextStep() {
+            if (!isActive) return;
+            const step = steps[currentStep];
+            circle.className = `circle ${step.className}`;
+            timerDisplay.innerText = `${step.name} for ${step.duration} seconds`;
+            setProgressBar(step.duration);
+            currentStep = (currentStep + 1) % steps.length;
+            if (currentStep === 0) breathCycles++;
+            if (breathCycles >= 4) {
+                stopExercise();
+            } else {
+                interval = setTimeout(nextStep, step.duration * 1000);
+            }
+        }
+
+        function setProgressBar(duration) {
+            let width = 0;
+            progressBar.style.width = width + '%';
+            let progressInterval = setInterval(() => {
+                width += (100 / (duration * 2));
+                progressBar.style.width = width + '%';
+                if (width >= 100) clearInterval(progressInterval);
+            }, 500);
+        }
+
+        startButton.addEventListener('click', startExercise);
+        stopButton.addEventListener('click', stopExercise);
+        restartButton.addEventListener('click', restartExercise);
+    </script>
+
+</body>
+</html>

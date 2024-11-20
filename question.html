@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Mental Health Assessment</title>
+    <link rel="stylesheet" href="question.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Children's Mental Health Assessment</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="question.html">Q/A Session</a></li>
+            <li><a href="remidies.html">Remidies</a></li>
+            <li><a href="InteractiveParentTeacherHub.html">Parents Hub</a></li>
+            <li><a href="activity.html">Activity</a></li>
+            <li><a href="index.html">Login</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+            <!-- Form with Questions -->
+    <form id="assessmentForm">
+
+        <!-- Depression Questions -->
+        <div class="question-step" id="step-1">
+            <h3>Depression Question 1</h3>
+            <p>In the past two weeks, how often have you felt down, depressed, or hopeless?</p>
+            <label><input type="radio" name="depression1" value="1"> Never</label><br>
+            <label><input type="radio" name="depression1" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression1" value="3"> Often</label><br>
+            <label><input type="radio" name="depression1" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-2">
+            <h3>Depression Question 2</h3>
+            <p>Have you lost interest in activities that you usually enjoy?</p>
+            <label><input type="radio" name="depression2" value="1"> Never</label><br>
+            <label><input type="radio" name="depression2" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression2" value="3"> Often</label><br>
+            <label><input type="radio" name="depression2" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-3">
+            <h3>Depression Question 3</h3>
+            <p>Do you feel tired or have little energy most of the time?</p>
+            <label><input type="radio" name="depression3" value="1"> Never</label><br>
+            <label><input type="radio" name="depression3" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression3" value="3"> Often</label><br>
+            <label><input type="radio" name="depression3" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-4">
+            <h3>Depression Question 4</h3>
+            <p>Do you have trouble concentrating on things like schoolwork or games?</p>
+            <label><input type="radio" name="depression4" value="1"> Never</label><br>
+            <label><input type="radio" name="depression4" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression4" value="3"> Often</label><br>
+            <label><input type="radio" name="depression4" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-5">
+            <h3>Depression Question 5</h3>
+            <p>Have you felt like you're moving or speaking more slowly than usual?</p>
+            <label><input type="radio" name="depression5" value="1"> Never</label><br>
+            <label><input type="radio" name="depression5" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression5" value="3"> Often</label><br>
+            <label><input type="radio" name="depression5" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-6">
+            <h3>Depression Question 6</h3>
+            <p>Have you felt like you have low self-worth or that you're a failure?</p>
+            <label><input type="radio" name="depression6" value="1"> Never</label><br>
+            <label><input type="radio" name="depression6" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression6" value="3"> Often</label><br>
+            <label><input type="radio" name="depression6" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-7">
+            <h3>Depression Question 7</h3>
+            <p>Do you feel guilty about things that aren't your fault?</p>
+            <label><input type="radio" name="depression7" value="1"> Never</label><br>
+            <label><input type="radio" name="depression7" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression7" value="3"> Often</label><br>
+            <label><input type="radio" name="depression7" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-8">
+            <h3>Depression Question 8</h3>
+            <p>Have you been crying or felt like crying for no specific reason?</p>
+            <label><input type="radio" name="depression8" value="1"> Never</label><br>
+            <label><input type="radio" name="depression8" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression8" value="3"> Often</label><br>
+            <label><input type="radio" name="depression8" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-9">
+            <h3>Depression Question 9</h3>
+            <p>Have you had thoughts that life isn’t worth living?</p>
+            <label><input type="radio" name="depression9" value="1"> Never</label><br>
+            <label><input type="radio" name="depression9" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression9" value="3"> Often</label><br>
+            <label><input type="radio" name="depression9" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-10">
+            <h3>Depression Question 10</h3>
+            <p>Do you have trouble finding joy or feeling happy, even when something good happens?</p>
+            <label><input type="radio" name="depression10" value="1"> Never</label><br>
+            <label><input type="radio" name="depression10" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="depression10" value="3"> Often</label><br>
+            <label><input type="radio" name="depression10" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-11">
+            <h3>Anxiety Question 1</h3>
+            <p>Do you often feel nervous or on edge?</p>
+            <label><input type="radio" name="anxiety1" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety1" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety1" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety1" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-12">
+            <h3>Anxiety Question 2</h3>
+            <p>Do you find it difficult to control your worries?</p>
+            <label><input type="radio" name="anxiety2" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety2" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety2" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety2" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-13">
+            <h3>Anexity Question 3</h3>
+            <p>Do you feel afraid as if something awful might happen?</p>
+            <label><input type="radio" name="anxiety3" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety3" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety3" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety3" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-14">
+            <h3>Anexity Question 4</h3>
+            <p>Do you feel restless or have trouble sitting still?</p>
+            <label><input type="radio" name="anxiety4" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety4" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety4" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety4" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-15">
+            <h3>Anexity Question 5</h3>
+            <p>Do you often avoid situations because you're afraid or anxious?</p>
+            <label><input type="radio" name="anxiety5" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety5" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety5" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety5" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-16">
+            <h3>Anexity Question 6</h3>
+            <p>Do you feel excessively worried about school or social situations?</p>
+            <label><input type="radio" name="anxiety6" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety6" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety6" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety6" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-17">
+            <h3>Anexity Question 7</h3>
+            <p>Are you easily startled or feel jumpy?</p>
+            <label><input type="radio" name="anxiety7" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety7" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety7" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety7" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-18">
+            <h3>Anexity Question 8</h3>
+            <p>Do you often feel tense or have physical symptoms like sweating or shaking?</p>
+            <label><input type="radio" name="anxiety8" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety8" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety8" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety8" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-19">
+            <h3>Anexity Question 9</h3>
+            <p>Do you have trouble sleeping because of worries or anxiety?</p>
+            <label><input type="radio" name="anxiety9" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety9" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety9" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety9" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-20">
+            <h3>Anexity Question 10</h3>
+            <p>Have you been experiencing sudden, overwhelming feelings of panic or fear?</p>
+            <label><input type="radio" name="anxiety10" value="1"> Never</label><br>
+            <label><input type="radio" name="anxiety10" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="anxiety10" value="3"> Often</label><br>
+            <label><input type="radio" name="anxiety10" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-21">
+            <h3>Stress Question 1</h3>
+            <p>How often do you feel overwhelmed by responsibilities or tasks?</p>
+            <label><input type="radio" name="stress1" value="1"> Never</label><br>
+            <label><input type="radio" name="stress1" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress1" value="3"> Often</label><br>
+            <label><input type="radio" name="stress1" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-22">
+            <h3>Stress Question 2</h3>
+            <p>Do you find it difficult to relax or unwind at the end of the day?</p>
+            <label><input type="radio" name="stress2" value="1"> Never</label><br>
+            <label><input type="radio" name="stress2" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress2" value="3"> Often</label><br>
+            <label><input type="radio" name="stress2" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-23">
+            <h3>Stress Question 3</h3>
+            <p>Do you feel like there are too many things to do, and you can't catch up?</p>
+            <label><input type="radio" name="stress3" value="1"> Never</label><br>
+            <label><input type="radio" name="stress3" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress3" value="3"> Often</label><br>
+            <label><input type="radio" name="stress3" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-24">
+            <h3>Stress Question 4</h3>
+            <p>Do you feel pressured to perform well in school or activities?</p>
+            <label><input type="radio" name="stress4" value="1"> Never</label><br>
+            <label><input type="radio" name="stress4" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress4" value="3"> Often</label><br>
+            <label><input type="radio" name="stress4" value="4"> Always</label><br>
+        </div>
+
+        <div class="question-step" id="step-25">
+            <h3>Stress Question 5</h3>
+            <p>Do you often feel frustrated or angry without knowing why?</p>
+            <label><input type="radio" name="stress5" value="1"> Never</label><br>
+            <label><input type="radio" name="stress5" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress5" value="3"> Often</label><br>
+            <label><input type="radio" name="stress5" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-26">
+            <h3>Stress Question 6</h3>
+            <p>Do you have trouble focusing because of the stress you’re under?</p>
+            <label><input type="radio" name="stress6" value="1"> Never</label><br>
+            <label><input type="radio" name="stress6" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress6" value="3"> Often</label><br>
+            <label><input type="radio" name="stress6" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-27">
+            <h3>Stress Question 7</h3>
+            <p>Do you feel like you’re constantly running out of time to do things?</p>
+            <label><input type="radio" name="stress7" value="1"> Never</label><br>
+            <label><input type="radio" name="stress7" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress7" value="3"> Often</label><br>
+            <label><input type="radio" name="stress7" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-28">
+            <h3>Stress Question 8</h3>
+            <p>Do you find it hard to balance your schoolwork and other activities?</p>
+            <label><input type="radio" name="stress8" value="1"> Never</label><br>
+            <label><input type="radio" name="stress8" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress8" value="3"> Often</label><br>
+            <label><input type="radio" name="stress8" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-29">
+            <h3>Stress Question 9</h3>
+            <p>Do you feel stress or tension in your body, such as headaches or muscle pain?</p>
+            <label><input type="radio" name="stress9" value="1"> Never</label><br>
+            <label><input type="radio" name="stress9" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress9" value="3"> Often</label><br>
+            <label><input type="radio" name="stress9" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-30">
+            <h3>Stress Question 10</h3>
+            <p>Do you find it hard to talk to others about how stressed you feel?</p>
+            <label><input type="radio" name="stress10" value="1"> Never</label><br>
+            <label><input type="radio" name="stress10" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="stress10" value="3"> Often</label><br>
+            <label><input type="radio" name="stress10" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-31">
+            <h3>Emotion Question 1</h3>
+            <p>How often do you feel that your emotions change quickly?</p>
+            <label><input type="radio" name="emotion1" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion1" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion1" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion1" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-32">
+            <h3>Emotion Question 2</h3>
+            <p>Do you find it difficult to control your temper when you’re upset?</p>
+            <label><input type="radio" name="emotion2" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion2" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion2" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion2" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-33">
+            <h3>Emotion Question 3</h3>
+            <p>Do you often feel overwhelmed by your emotions?</p>
+            <label><input type="radio" name="emotion3" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion3" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion3" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion3" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-34">
+            <h3>Emotion Question 4</h3>
+            <p>Do you find it hard to express how you feel to others?</p>
+            <label><input type="radio" name="emotion4" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion4" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion4" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion4" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-35">
+            <h3>Emotion Question 5</h3>
+            <p>When something goes wrong, do you find it difficult to stay calm?</p>
+            <label><input type="radio" name="emotion5" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion5" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion5" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion5" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-36">
+            <h3>Emotion Question 6</h3>
+            <p>Do you cry easily or more often than others around you?</p>
+            <label><input type="radio" name="emotion6" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion6" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion6" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion6" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-37">
+            <h3>Emotion Question 7</h3>
+            <p>Do you often feel that your emotions control you rather than the other way around?</p>
+            <label><input type="radio" name="emotion7" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion7" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion7" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion7" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-38">
+            <h3>Emotion Question 8</h3>
+            <p>Do you find yourself lashing out at others when you're upset?</p>
+            <label><input type="radio" name="emotion8" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion8" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion8" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion8" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-39">
+            <h3>Emotion Question 9</h3>
+            <p>Do you have trouble calming down after you’ve gotten upset?</p>
+            <label><input type="radio" name="emotion9" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion9" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion9" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion9" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-40">
+            <h3>Emotion Question 10</h3>
+            <p>Do you feel that you're able to manage your emotions most of the time?</p>
+            <label><input type="radio" name="emotion10" value="1"> Never</label><br>
+            <label><input type="radio" name="emotion10" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="emotion10" value="3"> Often</label><br>
+            <label><input type="radio" name="emotion10" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-41">
+            <h3>Sleep Question 1</h3>
+            <p>Do you have trouble falling asleep at night?</p>
+            <label><input type="radio" name="sleep1" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep1" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep1" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep1" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-42">
+            <h3>Sleep Question 2</h3>
+            <p>Do you wake up frequently during the night and have trouble getting back to sleep?</p>
+            <label><input type="radio" name="sleep2" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep2" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep2" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep2" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-43">
+            <h3>Sleep Question 3</h3>
+            <p>Do you wake up feeling tired, even after a full night's sleep?</p>
+            <label><input type="radio" name="sleep3" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep3" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep3" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep3" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-44">
+            <h3>Sleep Question 4</h3>
+            <p>Do you find it difficult to stay awake during the day?</p>
+            <label><input type="radio" name="sleep4" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep4" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep4" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep4" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-45">
+            <h3>Sleep Question 5</h3>
+            <p>Do you have bad dreams or nightmares that make it hard to sleep?</p>
+            <label><input type="radio" name="sleep5" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep5" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep5" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep5" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-46">
+            <h3>Sleep Question 6</h3>
+            <p>Do you often feel too anxious or stressed to fall asleep?</p>
+            <label><input type="radio" name="sleep6" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep6" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep6" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep6" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-47">
+            <h3>Sleep Question 7</h3>
+            <p>How often do you stay up late, even when you know you should be sleeping?</p>
+            <label><input type="radio" name="sleep7" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep7" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep7" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep7" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-48">
+            <h3>Sleep Question 8</h3>
+            <p>Do you rely on naps during the day because of poor nighttime sleep?</p>
+            <label><input type="radio" name="sleep8" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep8" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep8" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep8" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-49">
+            <h3>Sleep Question 9</h3>
+            <p>Do you feel rested and ready to start your day when you wake up in the morning?</p>
+            <label><input type="radio" name="sleep9" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep9" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep9" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep9" value="4"> Always</label><br>
+        </div>
+        <div class="question-step" id="step-50">
+            <h3>Sleep Question 10</h3>
+            <p>Have you been told that you snore or have trouble breathing when sleeping?</p>
+            <label><input type="radio" name="sleep10" value="1"> Never</label><br>
+            <label><input type="radio" name="sleep10" value="2"> Occasionally</label><br>
+            <label><input type="radio" name="sleep10" value="3"> Often</label><br>
+            <label><input type="radio" name="sleep10" value="4"> Always</label><br>
+        </div>
+
+        <!-- Anger Questions (steps 51-60) -->
+        <div class="question-step" id="step51">
+            <h3>Anger Question 1</h3>
+            <p>I often feel irritated or annoyed without a clear reason.</p>
+            <label><input type="radio" name="anger1" value="1">Never</label><br>
+            <label><input type="radio" name="anger1" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger1" value="3">Often</label><br>
+            <label><input type="radio" name="anger1" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step52">
+            <h3>Anger Question 2</h3>
+            <p>I find myself becoming angry easily over minor issues.</p>
+            <label><input type="radio" name="anger2" value="1">Never</label><br>
+            <label><input type="radio" name="anger2" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger2" value="3">Often</label><br>
+            <label><input type="radio" name="anger2" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step53">
+            <h3>Anger Question 3</h3>
+            <p>I have frequent outbursts of anger that I later regret.</p>
+            <label><input type="radio" name="anger3" value="1">Never</label><br>
+            <label><input type="radio" name="anger3" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger3" value="3">Often</label><br>
+            <label><input type="radio" name="anger3" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step54">
+            <h3>Anger Question 4</h3>
+            <p>I struggle to control my anger once I become angry.</p>
+            <label><input type="radio" name="anger4" value="1">Never</label><br>
+            <label><input type="radio" name="anger4" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger4" value="3">Often</label><br>
+            <label><input type="radio" name="anger4" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step55">
+            <h3>Anger Question 5</h3>
+            <p>I often feel resentful towards others.</p>
+            <label><input type="radio" name="anger5" value="1">Never</label><br>
+            <label><input type="radio" name="anger5" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger5" value="3">Often</label><br>
+            <label><input type="radio" name="anger5" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step56">
+            <h3>Anger Question 6</h3>
+            <p>I hold onto anger and find it hard to forgive others.</p>
+            <label><input type="radio" name="anger6" value="1">Never</label><br>
+            <label><input type="radio" name="anger6" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger6" value="3">Often</label><br>
+            <label><input type="radio" name="anger6" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step57">
+            <h3>Anger Question 7</h3>
+            <p>I experience physical symptoms (e.g., clenched fists, tense muscles) when I'm angry.</p>
+            <label><input type="radio" name="anger7" value="1">Never</label><br>
+            <label><input type="radio" name="anger7" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger7" value="3">Often</label><br>
+            <label><input type="radio" name="anger7" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step58">
+            <h3>Anger Question 8</h3>
+            <p>I lash out verbally (e.g., yelling, using harsh words) when I’m angry.</p>
+            <label><input type="radio" name="anger8" value="1">Never</label><br>
+            <label><input type="radio" name="anger8" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger8" value="3">Often</label><br>
+            <label><input type="radio" name="anger8" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step59">
+            <h3>Anger Question 9</h3>
+            <p>I feel that others are often out to get me, leading to anger.</p>
+            <label><input type="radio" name="anger9" value="1">Never</label><br>
+            <label><input type="radio" name="anger9" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger9" value="3">Often</label><br>
+            <label><input type="radio" name="anger9" value="4">Always</label><br>
+        </div>
+
+        <div class="question-step" id="step60">
+            <h3>Anger Question 10</h3>
+            <p>I have difficulty calming down once I start getting angry.</p>
+            <label><input type="radio" name="anger10" value="1">Never</label><br>
+            <label><input type="radio" name="anger10" value="2">Occasionally</label><br>
+            <label><input type="radio" name="anger10" value="3">Often</label><br>
+            <label><input type="radio" name="anger10" value="4">Always</label><br>
+        </div>
+
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+
+    </form>
+
+    <!-- Results Chart -->
+    <canvas id="resultsChart" style="display:none;"></canvas>
+
+    <!--div id="additionalInfo" class="container" style="display: none;">
+        <div class="card">
+            <p class="title">A - Overall</p>
+            <p class="description">Overall mental health represents your general psychological well-being and encompasses various aspects of your emotional and cognitive state.</p>
+            <a href="#" class="link">Click for Remedies</a>
+        </div>
+
+        <div class="card">
+            <p class="title">C - Obsessive Compulsive Disorder</p>
+            <p class="description">Obsessive Compulsive Disorder (OCD) involves unwanted, repetitive thoughts (obsessions) and behaviors (compulsions) to alleviate distress.</p>
+            <a href="#" class="link">Click for Remedies</a>
+        </div>
+
+        <div class="card">
+            <p class="title">E - Depression</p>
+            <p class="description">Depression is a mood disorder characterized by persistent feelings of sadness, hopelessness, and a lack of interest or pleasure in daily activities.</p>
+            <a href="#" class="link">Click for Remedies</a>
+        </div>
+
+        <div class="card">
+            <p class="title">G - Hostility</p>
+            <p class="description">Hostility refers to a pattern of anger, cynicism, and aggression, often displayed in interactions with others.</p>
+            <a href="#" class="link">Click for Remedies</a>
+        </div>
+    </div-->
+
+</main>
+
+<script src="question.js"></script>
+
+</body>
+</html>

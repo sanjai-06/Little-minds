@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Minds - Stress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/harmony/background.jpg'); /* Background Image */
+            background-size: cover; /* Make background cover entire area */
+            background-repeat: no-repeat; /* Prevent repeating of background image */
+            background-attachment: fixed; /* Keep background fixed during scrolling */
+            color: #f6eded;
+        }
+
+        header.main-header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: rgba(89, 45, 45, 0.8);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #cc7d7d;
+        }
+
+        /* Content Styles */
+        .content {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Emotional State Sections */
+        .emotional-state {
+            margin: 2rem 0;
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.459);
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .emotional-state a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 2rem;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .emotional-state:hover {
+            background-color: #c98989;
+            transform: scale(1.02);
+        }
+
+        .emotional-state img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h3 {
+            color: #7c2910;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            color: #f6eded;
+        }
+
+        /* Video Section */
+        .video-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        video {
+            border: 4px solid #cc7d7d;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 960px;
+            height: auto;
+        }
+
+        .video-description {
+            font-size: 1.2rem;
+            color: #f6eded;
+            margin-top: 0.5rem;
+        }
+
+        /* Back to Harmony Button */
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background-color: rgba(255, 255, 255, 0.459);
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #c98989;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(8, 8, 8, 0.8);
+            margin-top: 2rem;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #67caf5;
+        }
+
+        footer a:hover {
+            color: #acd8bd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1>Stress Remedies</h1>
+            <p>Here are some techniques to help manage stress effectively.</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="question.html">Q/A Session</a></li>
+            <li><a href="remidies.html">Remidies</a></li>
+            <li><a href="InteractiveParentTeacherHub.html">Parents Hub</a></li>
+            <li><a href="activity.html">Activity</a></li>
+            <li><a href="index.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Methods to Help Manage Stress</h2>
+        <p>Explore different strategies that can help manage stress effectively.</p>
+
+        <!-- Seek Professional Help -->
+        <div class="emotional-state">
+                <img src="images/harmony/stress/profession.jpg" alt="Seek Help Icon">
+                <h3>Seek Professional Help</h3>
+                <p>If stress becomes overwhelming, it may be time to seek professional help. Therapists or counselors can assist you in understanding the root causes of your stress and teach you stress management techniques like Cognitive Behavioral Therapy (CBT). A professional can help you work through chronic stress and reduce its negative impact on your life.</p>
+        </div>
+
+        <!-- Medications -->
+        <div class="emotional-state">
+                <img src="images/harmony/stress/medication.jpg" alt="Medication Icon">
+                <h3>Medications for Stress</h3>
+                <p>In some cases, medications may be prescribed to help manage stress, especially if it's affecting your daily life. Below are some commonly prescribed medications:</p>
+                <ul>
+                    <li><strong>Selective Serotonin Reuptake Inhibitors (SSRIs):</strong> These medications, such as fluoxetine (Prozac) and sertraline (Zoloft), help to balance serotonin levels in the brain, which can help alleviate feelings of anxiety and stress.</li>
+                    <li><strong>Serotonin-Norepinephrine Reuptake Inhibitors (SNRIs):</strong> Medications like venlafaxine (Effexor) and duloxetine (Cymbalta) are used to treat both depression and anxiety by balancing serotonin and norepinephrine levels in the brain, which can reduce stress symptoms.</li>
+                    <li><strong>Benzodiazepines:</strong> Drugs such as diazepam (Valium) or lorazepam (Ativan) can be prescribed for short-term use to relieve acute stress symptoms. These medications work quickly to relax the body, but should only be used under medical supervision due to their potential for dependency.</li>
+                    <li><strong>Beta-Blockers:</strong> Medications like propranolol (Inderal) are used to reduce the physical symptoms of stress, such as rapid heart rate, shaking, and sweating. These are commonly prescribed for performance anxiety or situations that trigger immediate stress.</li>
+                    <li><strong>Buspirone:</strong> A medication often prescribed for chronic anxiety that can help reduce symptoms without causing sedation. It's a good option for those who need longer-term stress management.</li>
+                </ul>
+                <p>It's important to note that medications should only be taken under the supervision of a healthcare provider. They are often most effective when combined with therapy and lifestyle changes to manage stress in the long term.</p>
+        </div>
+
+        <!-- Time Management -->
+        <div class="emotional-state">
+                <img src="images/harmony/stress/time.jpg" alt="Time Management Icon">
+                <h3>Time Management</h3>
+                <p>Effective time management is key to reducing stress. Learn how to prioritize tasks, delegate when necessary, and break large projects into smaller, manageable steps. Using tools like planners or apps to stay organized can reduce the feeling of being overwhelmed and create a sense of accomplishment.</p>
+        </div>
+
+        <!-- Video Sessions -->
+        <div class="video-wrapper">
+            <h3>Video Sessions</h3>
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/harmony/stress/How to Manage Stress with Time Management.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-description">Time Management for Stress Relief - Learn to prioritize and organize your day effectively.</div>
+            </div>
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/harmony/stress/Progressive Muscle Relaxation for Stress.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-description">Progressive Muscle Relaxation - A proven technique to release physical tension from your body.</div>
+            </div>
+            <p>These video sessions provide techniques to manage stress, from effective time management to physical relaxation. Follow along to incorporate these strategies into your daily routine.</p>
+        </div>
+
+        <!-- Physical Relaxation -->
+        <div class="emotional-state">
+                <img src="images/harmony/stress/relax.jpg" alt="Physical Relaxation Icon">
+                <h3>Physical Relaxation Techniques</h3>
+                <p>Relaxation techniques such as progressive muscle relaxation (PMR) and deep breathing exercises help reduce stress by calming the body. These techniques lower muscle tension, promote a relaxed state, and improve circulation. PMR involves tensing and relaxing different muscle groups to reduce physical stress symptoms.</p>
+        </div>
+
+        <!-- Social Support -->
+        <div class="emotional-state">
+                <img src="images/harmony/stress/social.jpg" alt="Social Support Icon">
+                <h3>Seek Social Support</h3>
+                <p>Having a strong support network can reduce stress levels. Reach out to friends, family, or support groups to talk about your stressors. Socializing or simply expressing your feelings to someone who understands can be a great stress reliever and provide emotional comfort.</p>
+        </div>
+
+        <!-- Nature Breaks -->
+        <div class="emotional-state">
+                <img src="images/harmony/stress/nature.jpg" alt="Nature Breaks Icon">
+                <h3>Nature Breaks</h3>
+                <p>Spending time in nature can be incredibly beneficial for stress relief. A walk in the park, hiking, or simply sitting outside and enjoying the fresh air can lower cortisol levels and calm your mind. Nature has a natural soothing effect on the body and mind, reducing the intensity of stress.</p>
+        </div>
+
+        <a href="remidies.html" class="back-button">Back to Remedies</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Little Minds | All Rights Reserved | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Minds - Sleep</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/harmony/background.jpg'); /* Background Image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #f6eded;
+        }
+
+        header.main-header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: rgba(89, 45, 45, 0.8);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #cc7d7d;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ea641c;
+            transition: color 0.3s;
+        }
+
+        /* Content Styles */
+        .content {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Emotional State Sections */
+        .emotional-state {
+            margin: 2rem 0;
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.459);
+            border-radius: 10px;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .emotional-state a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 2rem;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .emotional-state:hover {
+            background-color: #c98989;
+            transform: scale(1.02);
+        }
+
+        .emotional-state img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h3 {
+            color: #7c2910;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            color: #f6eded;
+        }
+
+        /* Video Section */
+        .video-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+
+        video {
+            border: 4px solid #cc7d7d;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 960px;
+            height: auto;
+        }
+
+        /* Video Description */
+        .video-description {
+            font-size: 1.2rem;
+            color: #f6eded;
+            margin-top: 0.5rem;
+        }
+
+        /* Back to Harmony Button */
+        .back-button {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background-color: rgba(255, 255, 255, 0.459);
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #c98989;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(8, 8, 8, 0.8);
+            margin-top: 2rem;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #67caf5;
+        }
+
+        footer a:hover {
+            color: #acd8bd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1>Sleep Management</h1>
+            <p>Let us help you improve your sleep!</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="question.html">Q/A Session</a></li>
+            <li><a href="remidies.html">Remedy</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Improving Your Sleep</h2>
+        <p>Explore different techniques, remedies, and medications that can help you sleep better.</p>
+
+        <!-- Seek Professional Help Section -->
+        <div class="emotional-state">
+            <a href="seekprofessionalhelp.html">
+                <img src="images/harmony/professionalhelpicon.jpg" alt="Professional Help Icon">
+                <h3>Seek Professional Help</h3>
+                <p>If you're struggling with chronic sleep issues, it may be time to consult a healthcare professional.</p>
+                <ul style="text-align:left; font-size: 1rem; margin-left: 20px;">
+                    <li>If you experience persistent insomnia lasting more than three weeks, seek help.</li>
+                    <li>If you suffer from sleep apnea (pauses in breathing during sleep), consult a doctor immediately.</li>
+                    <li>If medications or natural remedies aren't helping, a sleep specialist can help identify underlying causes.</li>
+                    <li>If sleep is significantly affecting your daily life (concentration, mood, energy), professional guidance is recommended.</li>
+                </ul>
+            </a>
+        </div>
+
+        <!-- Medications -->
+        <div class="emotional-state">
+            <a href="sleepmedications.html">
+                <img src="images/harmony/medicationicon.jpg" alt="Medication Icon">
+                <h3>Medications for Sleep</h3>
+                <p>In some cases, medications can assist with sleep disorders. Here are some common options:</p>
+                <ul style="text-align:left; font-size: 1rem; margin-left: 20px;">
+                    <li><strong>Melatonin:</strong> A natural hormone supplement that helps regulate sleep-wake cycles.</li>
+                    <li><strong>Valerian Root:</strong> An herbal supplement used to reduce anxiety and promote relaxation.</li>
+                    <li><strong>Diphenhydramine:</strong> An antihistamine that causes drowsiness and is used in over-the-counter sleep aids.</li>
+                    <li><strong>Prescription Medications:</strong> Such as benzodiazepines or non-benzodiazepines, prescribed for serious sleep disorders like insomnia.</li>
+                </ul>
+            </a>
+        </div>
+        <!-- Sleep Improvement Techniques -->
+        <div class="emotional-state">
+            <a href="sleeptechniques.html">
+                <img src="images/harmony/sleeptechniqueicon.jpg" alt="Sleep Technique Icon">
+                <h3>Sleep Improvement Techniques</h3>
+                <p>Relaxation, establishing a consistent routine, and creating a calming sleep environment can improve the quality of your sleep.</p>
+            </a>
+        </div>
+
+        <!-- Remedies Section (Additional) -->
+        <div class="emotional-state">
+            <a href="sleepremedies.html">
+                <img src="images/harmony/remedyicon.jpg" alt="Sleep Remedies Icon">
+                <h3>Additional Sleep Remedies</h3>
+                <p>Here are some natural remedies you can try for better sleep:</p>
+                <ul style="text-align:left; font-size: 1rem; margin-left: 20px;">
+                    <li><strong>Warm Milk:</strong> Contains tryptophan, an amino acid that helps to induce sleep.</li>
+                    <li><strong>Lavender Aromatherapy:</strong> Known for its calming effect, lavender essential oil can help with relaxation before bedtime.</li>
+                    <li><strong>Herbal Teas:</strong> Chamomile and peppermint teas can soothe the body and mind, promoting better sleep.</li>
+                    <li><strong>Regular Exercise:</strong> Engaging in regular physical activity during the day can help improve sleep quality at night.</li>
+                    <li><strong>Avoid Stimulants:</strong> Limiting caffeine or nicotine intake, especially in the evening, can help you fall asleep faster.</li>
+                </ul>
+            </a>
+        </div>
+
+        <!-- Video Sessions -->
+        <div class="video-wrapper">
+            <h3>Watch Videos on Sleep</h3>
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/harmony/sleep/How Sleep Affects Your Brain.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-description">Sleep Affects on Brain</div>
+            </div>
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/harmony/sleep/What would happen if you didn’t sleep_ - Claudia Aguirre.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-description">Let the Brain Sleepzz !!</div>
+            </div>
+        </div>
+
+        <a href="remidies.html" class="back-button">Back to Remedies</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Little Minds | All Rights Reserved | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+</body>
+</html>

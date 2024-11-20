@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Minds - Harmony</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/harmony/background.jpg'); /* Background Image */
+            background-size: cover; /* Make background cover entire area */
+            background-repeat: no-repeat; /* Prevent repeating of background image */
+            background-attachment: fixed; /* Keep background fixed during scrolling */
+            color: #f6eded;
+        }
+
+        header.main-header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: rgba(89, 45, 45, 0.8);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #cc7d7d;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        /* Harmony Section Heading and Paragraph */
+        .harmony-section h2 {
+            text-align: center; /* Center the heading */
+            font-size: 2.5rem;  /* Adjust the font size as needed */
+            margin-bottom: 1rem; /* Space below the heading */
+        }
+
+        .harmony-section p {
+            text-align: center; /* Center the paragraph */
+            font-size: 1.2rem;  /* Adjust the font size as needed */
+            margin-bottom: 2rem; /* Space below the paragraph */
+        }
+
+        .emotional-state {
+            margin: 2rem 0;
+            text-align: center; /* Center the content */
+        }
+
+        .emotional-state a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block; /* Allow for centering */
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.459); /* Reduced opacity for transparency */
+            border-radius: 10px;
+            margin: 1rem 0;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+
+        .emotional-state a:hover {
+            background-color: #c98989;
+            transform: scale(1.02);
+        }
+
+        .emotional-state img {
+            width: 100px; /* Set a fixed width for the icons */
+            height: 100px; /* Set a fixed height for the icons */
+            display: block; /* Display block to center image */
+            margin: 0 auto; /* Center the image */
+        }
+
+        h3 {
+            color: #7c2910;
+            font-size: 1.4rem; /* Adjust font size for the labels */
+            margin-top: 0.5rem; /* Space between image and text */
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ea641c;
+            transition: color 0.3s;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(8, 8, 8, 0.8);
+            margin-top: 2rem;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #67caf5;
+        }
+
+        footer a:hover {
+            color: #acd8bd;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="animated">Remidies</h1>
+            <p class="animated">Helping children achieve emotional balance by giving them audio suggestions.</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="question.html">Q/A Session</a></li>
+            <li><a href="remidies.html">Remidies</a></li>
+            <li><a href="InteractiveParentTeacherHub.html">Parents Hub</a></li>
+            <li><a href="activity.html">Activity</a></li>
+            <li><a href="index.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Harmony Section -->
+    <section class="harmony-section">
+        <div class="container">
+            <h2>Select an Emotional State</h2>
+            <p>Click on an emotional state to explore tailored video exercises.</p>
+
+            <!-- Anxiety Section -->
+            <div class="emotional-state">
+                <a href="anxiety.html">
+                    <img src="images/harmony/axietyicon.jpg" alt="Anxiety">
+                    <h3>Anxiety</h3>
+                </a>
+            </div>
+
+            <!-- Stress Section -->
+            <div class="emotional-state">
+                <a href="stress.html">
+                    <img src="images/harmony/stressicon.jpg" alt="Stress">
+                    <h3>Stress</h3>
+                </a>
+            </div>
+
+            <!-- Anger Section -->
+            <div class="emotional-state">
+                <a href="anger.html">
+                    <img src="images/harmony/angericon.jpg" alt="Anger Icon">
+                    <h3>Anger and Frustration</h3>
+                </a>
+            </div>
+
+            <!-- Sadness/Depression Section -->
+            <div class="emotional-state">
+                <a href="depression.html">
+                    <img src="images/harmony/depressionicon.jpg" alt="Sadness Icon">
+                    <h3>Sadness and Depression</h3>
+                </a>
+            </div>
+
+            <!-- Fear Section -->
+            <div class="emotional-state">
+                <a href="fear.html">
+                    <img src="images/harmony/fearicon.jpg" alt="Fear Icon">
+                    <h3>Fear and Nervousness</h3>
+                </a>
+            </div>
+
+            <!-- Sleep Issues Section -->
+            <div class="emotional-state">
+                <a href="sleep.html">
+                    <img src="images/harmony/sleepicon.jpg" alt="Sleep Icon">
+                    <h3>Sleep Issues</h3>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Little Minds | All Rights Reserved | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Daily Routine & Mental Health Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgba(135, 206, 235, 0.9);
+            color: #333;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            font-weight: bold;
+            color: #006400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 20px;
+            margin: 10px 0;
+            font-style: italic;
+            color: #ff5722;
+        }
+
+        /* Main container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Activity checklist */
+        .activity-section {
+            margin-bottom: 30px;
+        }
+        .activity-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .activity-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 20px;
+            background-color: #F0F8FF; /* Light Blue */
+            padding: 12px 20px;
+            border-radius: 10px;
+            width: 45%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .activity-list li:hover {
+            transform: scale(1.05);
+            background-color: #87CEFA; /* Sky Blue */
+        }
+        .activity-icon {
+            font-size: 30px;
+            margin-right: 15px;
+            color: #f44336;
+        }
+        .activity-list input {
+            margin-right: 12px;
+            transform: scale(1.5);
+        }
+
+        /* Mood rating */
+        .mood-rating {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+        .mood-rating input[type="number"] {
+            width: 80px;
+            padding: 12px;
+            font-size: 22px;
+            text-align: center;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            background-color: #ffffff;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .mood-rating input[type="number"]:hover {
+            background-color: #f1f8f7;
+        }
+
+        /* Reflection sections */
+        .reflection textarea {
+            width: 100%;
+            height: 140px;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .reflection textarea:hover {
+            background-color: #f1f8f7;
+        }
+
+        /* Gratitude and Goals sections */
+        .gratitude,
+        .goals {
+            margin-top: 30px;
+        }
+        .gratitude input,
+        .goals input {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            background-color: #e1f5fe;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .gratitude input:hover,
+        .goals input:hover {
+            background-color: #c8e6c9;
+        }
+
+        /* Button */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 22px;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 240px;
+            margin-top: 30px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 32px;
+            }
+            .activity-list li {
+                font-size: 18px;
+                width: 100%;
+            }
+            .mood-rating input[type="number"] {
+                width: 80px;
+            }
+        }
+        nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fun Daily Routine Tracker</h1>
+        <p>Track your day, feel great, and be happy!</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="question.html">Q/A Session</a></li>
+            <li><a href="remidies.html">Remidies</a></li>
+            <li><a href="InteractiveParentTeacherHub.html">Parents Hub</a></li>
+            <li><a href="activity.html">Activity</a></li>
+            <li><a href="index.html">Login</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <section class="activity-section">
+            <h2>Daily Activities</h2>
+            <p>What did you do today? Check the things you've completed:</p>
+            <ul class="activity-list">
+                <li><span class="activity-icon">🏃‍♂️</span><input type="checkbox" id="exercise"><label for="exercise">Exercise</label></li>
+                <li><span class="activity-icon">🥗</span><input type="checkbox" id="healthyMeals"><label for="healthyMeals">Healthy Meals</label></li>
+                <li><span class="activity-icon">🧘‍♀️</span><input type="checkbox" id="meditation"><label for="meditation">Meditation</label></li>
+                <li><span class="activity-icon">💤</span><input type="checkbox" id="sleep"><label for="sleep">Good Sleep</label></li>
+                <li><span class="activity-icon">👥</span><input type="checkbox" id="socialInteraction"><label for="socialInteraction">Social Interaction</label></li>
+                <li><span class="activity-icon">📚</span><input type="checkbox" id="study"><label for="study">Study Time</label></li>
+                <li><span class="activity-icon">🎨</span><input type="checkbox" id="creativity"><label for="creativity">Creative Activity</label></li>
+                <li><span class="activity-icon">🌞</span><input type="checkbox" id="outdoorTime"><label for="outdoorTime">Outdoor Time</label></li>
+            </ul>
+        </section>
+
+        <!-- Mood Rating Section -->
+        <section class="mood-rating">
+            <h2>How Are You Feeling Today?</h2>
+            <p>Rate your mood from 1 to 10!</p>
+            <input type="number" id="moodRating" min="1" max="10">
+        </section>
+
+        <!-- Reflection Section -->
+        <section class="activity-section reflection">
+            <h2>What Did You Think About Today?</h2>
+            <p>Write your feelings:</p>
+            <textarea id="reflection" placeholder="How did your day go?"></textarea>
+        </section>
+
+        <!-- Gratitude Section -->
+        <section class="gratitude">
+            <h2>What Are You Thankful For?</h2>
+            <input type="text" id="gratitude1" placeholder="Something you're grateful for">
+            <input type="text" id="gratitude2" placeholder="Another thing you're thankful for">
+        </section>
+
+        <!-- Goals Section -->
+        <section class="goals">
+            <h2>Your Goals</h2>
+            <input type="text" id="goal1" placeholder="One thing you'd like to achieve">
+            <input type="text" id="goal2" placeholder="Another goal for tomorrow">
+        </section>
+
+        <!-- Save Button -->
+        <button class="btn" onclick="saveData()">Save Your Day</button>
+    </div>
+
+    <script>
+        function saveData() {
+            let activities = [
+                document.getElementById("exercise").checked,
+                document.getElementById("healthyMeals").checked,
+                document.getElementById("meditation").checked,
+                document.getElementById("sleep").checked,
+                document.getElementById("socialInteraction").checked,
+                document.getElementById("study").checked,
+                document.getElementById("creativity").checked,
+                document.getElementById("outdoorTime").checked
+            ];
+            let moodRating = document.getElementById("moodRating").value;
+            let reflection = document.getElementById("reflection").value;
+            let gratitude = [
+                document.getElementById("gratitude1").value,
+                document.getElementById("gratitude2").value
+            ];
+            let goals = [
+                document.getElementById("goal1").value,
+                document.getElementById("goal2").value
+            ];
+
+            console.log("Activities:", activities);
+            console.log("Mood Rating:", moodRating);
+            console.log("Reflection:", reflection);
+            console.log("Gratitude:", gratitude);
+            console.log("Goals:", goals);
+
+            alert("Data saved successfully!");
+        }
+    
+    function saveData() {
+        let activities = [
+            document.getElementById("exercise").checked,
+            document.getElementById("healthyMeals").checked,
+            document.getElementById("meditation").checked,
+            document.getElementById("sleep").checked,
+            document.getElementById("socialInteraction").checked,
+            document.getElementById("study").checked,
+            document.getElementById("creativity").checked,
+            document.getElementById("outdoorTime").checked
+        ];
+        let moodRating = document.getElementById("moodRating").value;
+        let reflection = document.getElementById("reflection").value;
+        let gratitude = [
+            document.getElementById("gratitude1").value,
+            document.getElementById("gratitude2").value
+        ];
+        let goals = [
+            document.getElementById("goal1").value,
+            document.getElementById("goal2").value
+        ];
+
+        // Send data to the server
+        fetch('save_data.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                activities: activities,
+                moodRating: moodRating,
+                reflection: reflection,
+                gratitude: gratitude,
+                goals: goals
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                alert("Data saved successfully!");
+            } else {
+                alert("Error: " + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+
+</body>
+</html>
